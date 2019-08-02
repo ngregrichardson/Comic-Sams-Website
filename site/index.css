@@ -393,8 +393,12 @@ label {
   cursor: pointer;
 }
 
-input[type="radio"]:active + label span {
+input[type="radio"]:hover + label span {
   background: url("/activeRadio") left top no-repeat;
+}
+
+input[type="radio"]:active + label span {
+  background: url("/uncheckedRadio") left top no-repeat;
 }
 
 input[type="radio"]:checked + label span {
