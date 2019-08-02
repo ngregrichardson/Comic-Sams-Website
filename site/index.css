@@ -269,6 +269,15 @@ a.brand:hover {
   text-align: center;
 }
 
+#footer-copy {
+  color: white;
+  text-decoration: none;
+}
+
+#footer-copy:hover {
+  opacity: 0.8;
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
   .header-image {
     display: none;
@@ -384,7 +393,7 @@ label {
   cursor: pointer;
 }
 
-input[type="active"]:checked + label span {
+input[type="radio"]:active + label span {
   background: url("/activeRadio") left top no-repeat;
 }
 
