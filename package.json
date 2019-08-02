@@ -1,0 +1,25 @@
+{
+  "name": "comic-sams-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "comicsams.js",
+  "scripts": {
+    "start": "node comicsams.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngregrichardson/Comic-Sams-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngregrichardson/Comic-Sams-Website/issues"
+  },
+  "homepage": "https://comicsams.nrdesign.xyz/",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "nodemailer": "^6.3.0"
+  }
+}

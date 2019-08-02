@@ -1,0 +1,431 @@
+body {
+  margin: 0px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.background {
+  position: fixed;
+  z-index: -10;
+  background: url("/background") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background: #fff;
+  height: 60px;
+  align-items: center;
+  position: sticky;
+}
+
+.brand {
+  cursor: default;
+  pointer-events: none;
+  font-size: 2em;
+  padding: 0px 10px;
+  text-decoration: none;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+a.brand {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+a.brand:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #ff2),
+    color-stop(0.3, #f2f),
+    color-stop(0.45, #2f2),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2ff),
+    color-stop(0.9, #22f),
+    color-stop(1, #f22)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #ff2),
+    color-stop(0.3, #f2f),
+    color-stop(0.45, #2f2),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2ff),
+    color-stop(0.9, #22f),
+    color-stop(1, #f22)
+  );
+}
+
+.nav-list .current {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #ff2),
+    color-stop(0.3, #f2f),
+    color-stop(0.45, #2f2),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2ff),
+    color-stop(0.9, #22f),
+    color-stop(1, #f22)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #ff2),
+    color-stop(0.3, #f2f),
+    color-stop(0.45, #2f2),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2ff),
+    color-stop(0.9, #22f),
+    color-stop(1, #f22)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.nav-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 30px;
+}
+
+.nav-list li a {
+  padding: 0px 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3em;
+}
+
+.nav-list li a:hover {
+  font-weight: bold;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px;
+}
+
+.header-image {
+  margin: 0 auto;
+  width: 15%;
+}
+
+.main-container {
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  flex: 1;
+  flex-grow: 1;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  padding-top: 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 4em;
+  margin: 0px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.subtitle {
+  font-size: 2em;
+}
+
+.paragraph {
+  font-size: 1.5em;
+}
+
+#footer {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#fixed-footer {
+  position: fixed;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .header-image {
+    display: none;
+  }
+  .header {
+    padding: 30px !important;
+  }
+  .download {
+    text-align: right;
+  }
+  .brand {
+    font-size: 2em;
+  }
+  .nav-list {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .main-container {
+    max-width: 80%;
+  }
+  .subtitle {
+    text-align: center;
+  }
+  #footer-copy {
+    font-size: 30px;
+  }
+  .text-box {
+    width: 80% !important;
+  }
+  textarea {
+    width: 80% !important;
+    font-size: 1em;
+  }
+  label {
+    font-size: 1.5em;
+  }
+  input[type="text"],
+  input[type="email"] {
+    height: 75px;
+    font-size: 1em !important;
+  }
+  ::placeholder {
+    font-size: 2em !important;
+  }
+  input[type="submit"] {
+    font-size: 1.5em !important;
+  }
+}
+
+form {
+  font-size: 200%;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.container {
+  padding-left: 32%;
+}
+
+.text-box {
+  width: 40%;
+  height: 30px;
+  border-style: hidden;
+  border-bottom: solid;
+  border-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    )
+    10;
+}
+
+textarea {
+  width: 40%;
+  border-style: hidden;
+  border-bottom: solid;
+  border-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    )
+    10;
+}
+
+::placeholder {
+  font-size: 150%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/uncheckedRadio") left top no-repeat;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="active"]:checked + label span {
+  background: url("/activeRadio") left top no-repeat;
+}
+
+input[type="radio"]:checked + label span {
+  background: url("/checkedRadio") left top no-repeat;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 70%;
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: solid;
+  border-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    )
+    10;
+}
+
+input[type="submit"]:hover {
+  background: lightgray;
+}
+
+input[type="submit"]:active {
+  background: gray;
+}
+
+input[type="text"] {
+  margin: 10px 0px;
+}
+
+#error {
+  color: red;
+  font-size: 0.5em;
+}

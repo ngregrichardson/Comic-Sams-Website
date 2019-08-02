@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Feedback | Comic Sams Chrome Extension</title>
+    <link rel="stylesheet" type="text/css" href="/css" />
+    <meta name="description"
+        content="Comic Sams is a project designed to give Google Chrome browsers some variety and color." />
+    <meta name="keywords" content="comic,sams,chrome,extension" />
+    <meta name="author" content="Noah Richardson" />
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="nav">
+        <div class="nav-container">
+            <h3 class="brand heading">Comic Sams</h3>
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="#" class="current">Feedback</a></li>
+            </ul>
+        </div>
+        <a class="brand download"
+            href="https://chrome.google.com/webstore/detail/comic-sams/miodnionkealgmgafpmpilhlbgbabjdg"
+            target="_blank">Download</a>
+    </div>
+    <br /><br />
+    <div class="main-container">
+        <h2 class="title">Feedback</h2>
+        <form id="feedback-form" accept-charset="UTF-8">
+            <br />
+            <input class="text-box" type="text" name="name" placeholder="Name..." id="name" /><br />
+            <input class="text-box" type="email" name="email" placeholder="Email..." id="email" /><br /><span class="subtitle">Feedback
+            Type*</span><br />
+            <input type="radio" name="Type" value="comment" id="comment" />
+            <label for="comment"><span></span> Comment</label><br />
+            <input type="radio" name="Type" value="question" id="question" />
+            <label for="question"><span></span> Question</label><br />
+            <input type="radio" name="Type" value="bug" id="bug" />
+            <label for="bug"><span></span> Bug Report</label><br />
+            <input type="radio" name="Type" value="feature" id="feature" />
+            <label for="feature"><span></span> Feature Request</label><br /><br />
+            <textarea name="feedback" placeholder="Feedback...*" rows="3" id="feedback" required></textarea><br /><br />
+            <input type="submit" /><br />
+            <span id="error"></span>
+        </form>
+    </div>
+    <div id="fixed-footer">
+        <span id="footer-copy">&copy; Noah Richardson</span>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $("#footer-copy").html(`&copy; Noah Richardson ${new Date().getFullYear()}`);
+        $("#feedback-form").submit((e) => {
+            e.preventDefault();
+            let type = $("#comment").prop("checked") ? "Comment" : $("#question").prop("checked") ? "Question" : $("#bug").prop("checked") ? "Bug Report" : $("#feature").prop("checked") ? "Feature Request" : "Comment";
+            let fields = {
+                name: $("#name").val(),
+                email: $("#email").val(),
+                type: type,
+                feedback: $("#feedback").val()
+            }
+            $.post("/submit", fields, (info, textStatus) => {
+                if(textStatus === "success") {
+                    $("#error").css("color", "lime");
+                    $("#error").text("Thank you for your feedback!");
+                }else {
+                    $("#error").css("color", "red");
+                    $("#error").text("There was a problem submitting your feedback.");
+                    console.log(info);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
